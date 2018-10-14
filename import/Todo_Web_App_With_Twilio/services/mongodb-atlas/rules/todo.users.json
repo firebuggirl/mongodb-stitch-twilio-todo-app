@@ -1,0 +1,54 @@
+{
+    "id": "5bc232fb35625ec207e04942",
+    "database": "todo",
+    "collection": "users",
+    "roles": [
+        {
+            "name": "default",
+            "apply_when": {
+                "%%true": true
+            },
+            "read": {
+                "_id": "%%user.id"
+            },
+            "write": {
+                "%or": [
+                    {
+                        "%%prevRoot._id": "%%user.id"
+                    },
+                    {
+                        "%%prevRoot": {
+                            "%exists": false
+                        }
+                    }
+                ]
+            },
+            "insert": {
+                "%or": [
+                    {
+                        "%%prevRoot._id": "%%user.id"
+                    },
+                    {
+                        "%%prevRoot": {
+                            "%exists": false
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "%or": [
+                    {
+                        "%%prevRoot._id": "%%user.id"
+                    },
+                    {
+                        "%%prevRoot": {
+                            "%exists": false
+                        }
+                    }
+                ]
+            },
+            "additional_fields": {}
+        }
+    ],
+    "schema": {}
+}

@@ -1,0 +1,8 @@
+{
+    "id": "5bc232fb35625ec207e04943",
+    "name": "tw1",
+    "type": "twilio",
+    "config": {
+        "sid": "\u003c\u003creplace_me\u003e\u003e"
+    }
+}

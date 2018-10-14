@@ -1,0 +1,76 @@
+{
+    "id": "5bc232fb35625ec207e04941",
+    "database": "todo",
+    "collection": "items",
+    "filters": [
+        {
+            "name": "filter-0",
+            "query": {
+                "owner_id": "%%user.id"
+            },
+            "apply_when": {
+                "%%true": true
+            }
+        }
+    ],
+    "roles": [
+        {
+            "name": "default",
+            "apply_when": {
+                "%%true": true
+            },
+            "fields": {
+                "owner_id": {}
+            },
+            "read": {
+                "owner_id": "%%user.id"
+            },
+            "write": {
+                "%or": [
+                    {
+                        "%%prevRoot.owner_id": "%%user.id"
+                    },
+                    {
+                        "%%prevRoot": {
+                            "%exists": false
+                        }
+                    }
+                ]
+            },
+            "insert": {
+                "%or": [
+                    {
+                        "%%prevRoot.owner_id": "%%user.id"
+                    },
+                    {
+                        "%%prevRoot": {
+                            "%exists": false
+                        }
+                    }
+                ]
+            },
+            "delete": {
+                "%or": [
+                    {
+                        "%%prevRoot.owner_id": "%%user.id"
+                    },
+                    {
+                        "%%prevRoot": {
+                            "%exists": false
+                        }
+                    }
+                ]
+            },
+            "additional_fields": {}
+        }
+    ],
+    "schema": {
+        "properties": {
+            "owner_id": {
+                "validate": {
+                    "%%this": "%%user.id"
+                }
+            }
+        }
+    }
+}
