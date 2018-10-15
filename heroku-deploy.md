@@ -1,4 +1,4 @@
-
+` npm install --save serve `
 
 ` heroku login `
 
@@ -12,4 +12,8 @@
 
   ` heroku logs `//check for deployment errors
 
-  - add `Node Buildpack` via Heroku UI
+  * add `Node Buildpack` via Heroku UI
+
+      - OR via bash:
+
+      ` heroku buildpacks:set heroku/nodejs `
