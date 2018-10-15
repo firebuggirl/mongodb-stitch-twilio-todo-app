@@ -454,7 +454,7 @@ if (process.env.MONGODB_SERVICE) {
 
 let options = {};
 if (process.env.STITCH_URL) {
-  options.baseUrl = process.env.STITCH_URL;
+  options.baseUrl = process.env.STITCH_URL; 
 }
 
 let stitchClientPromise = StitchClientFactory.create(appId, options);

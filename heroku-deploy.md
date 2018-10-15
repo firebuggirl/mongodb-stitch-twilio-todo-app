@@ -17,3 +17,5 @@
       - OR via bash:
 
       ` heroku buildpacks:set heroku/nodejs `
+
+ * Add environment variables to Heroku UI
