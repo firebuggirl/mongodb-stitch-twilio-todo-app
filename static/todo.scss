@@ -23,7 +23,10 @@ body {
 }
 
 .login-links-panel{
-  margin:40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .new-item-input {
@@ -132,7 +135,9 @@ input[type='checkbox']:checked {
 
 .signin-button {
   cursor:pointer;
-	display: inline-flex;
+	display: flex;
+  width: 50vw;
+  justify-content: center;
 	align-items:center;
 	&-text{
 		padding-left:10px;
@@ -141,7 +146,10 @@ input[type='checkbox']:checked {
 	padding:10px;
 	border: 1px solid #ccc;
 	border-radius:5px;
+  margin-bottom: 1.5em;
+
 }
+
 
 .facebook-signin-logo{
   height: 18px;
@@ -154,4 +162,16 @@ input[type='checkbox']:checked {
 .cleanup-button{
   background-color: #de4638;
   color: beige;
+}
+
+.listDiv{
+  padding: 1em;
+}
+.lists{
+  color: #d0d0b1;
+  font-size: 1.5em;
+}
+
+.verifyNumber{
+  margin-top: 1em;
 }

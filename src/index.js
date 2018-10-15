@@ -478,7 +478,7 @@ let TodoItem = class extends React.Component {
           {this.props.item.checked
             ? <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="#000000"
+                fill="#e24e37"
                 height="24"
                 viewBox="0 0 24 24"
                 width="24"
@@ -487,7 +487,7 @@ let TodoItem = class extends React.Component {
                 <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
               </svg>
             : <svg
-                fill="#000000"
+                fill="#d0d0b1"
                 height="24"
                 viewBox="0 0 24 24"
                 width="24"
@@ -835,8 +835,8 @@ var Settings = class extends React.Component {
   }
   render() {
     return (
-      <div>
-        <Link to="/">Lists</Link>
+      <div className="listDiv">
+        <Link to="/" className="lists">Lists</Link>
         {(u => {
           if (u != null) {
             if (u.number_status === "pending") {
@@ -845,7 +845,7 @@ var Settings = class extends React.Component {
               return <NumberConfirm onSubmit={() => this.loadUser()} stitchClient={this.stitchClient} users={this.users} />;
             } else if (u.number_status === "verified") {
               return (
-                <div
+                <div className="verifyNumber"
                 >{`Your number is verified, and it's ${u.phone_number}`}</div>
               );
             }
