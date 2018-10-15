@@ -1,7 +1,7 @@
 # Todo App
 
 
-[![Powered by Stitch](http://badge.learnstitch.com/?appid=todo_web_app-bmure)(http://cloud.mongodb.com)]
+[Powered by Stitch](http://badge.learnstitch.com/?appid=todo_web_app-bmure)(http://cloud.mongodb.com)]
 
 
 
