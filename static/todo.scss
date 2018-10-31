@@ -1,3 +1,6 @@
+$navBar: #9b3232;
+
+
 body {
   font-family:"Roboto", serif;
   margin:0px;
@@ -12,14 +15,20 @@ body {
 
 .logout {
   font-size:1.5em;
-  margin-left: 10px;
+  margin-left: 0px;
   color: beige;
+  @media all and (min-width:600px){
+    margin-left: 10px;
+  }
 }
 
 .settings {
   font-size:1.5em;
-  margin-left: 10px;
+  margin-left: 0px;
   color: beige;
+  @media all and (min-width:600px){
+    margin-left: 10px;
+  }
 }
 
 .login-links-panel{
@@ -27,10 +36,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 30vh;
 }
 
 .new-item-input {
   font-size: 2em;
+}
+.new-item:focus{
+	font-size: 1.8em;
+	background-color: #ceb5ade6;
+	border: 3px solid #9c0a0a;
 }
 
 .checkbox-input {
@@ -61,18 +76,65 @@ input[type='checkbox']:checked {
   margin-bottom:25px;
   align-items: center;
   border-bottom:1px solid #ccc;
+  justify-content: flex-end;
   .login-text{
     color:#f5f0da;
     font-size: 1.5em;
     .username{
-      color: #de2121;
+      color: #d2770d;
       font-weight:bold;
     }
   }
 }
 
+@media (max-width: 800px){
+  .login-header{
+     justify-content:space-around;
+  }
+}
+
+@media (max-width: 600px){
+  .login-header{
+    flex-flow: column wrap;
+    padding:0;
+    border-radius:3px;
+  }
+  .login-text{
+    margin-bottom: 1em;
+    padding: .5em;
+    border: 2px solid beige;
+    border-radius: 4px;
+  }
+  .navItems{
+    text-align:center;
+    border-top: 2px solid white;
+    // margin-top: .75em;
+    // margin-bottom: .75em;
+	  background-color: #9b3232;
+	  width: 100vw;
+    padding: 10px;
+
+  }
+
+  .navItems:hover,
+  .navItems:active {
+    background-color: darken($navBar, 3%);
+  }
+
+  .todo-item-text{
+    overflow-x: scroll;
+  }
+
+}
+
+
 .new-item{
 	font-size:1.8em;
+  @media (max-width: 600px){
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
 }
 
 .todo-item-root {
@@ -82,6 +144,7 @@ input[type='checkbox']:checked {
 .todo-item-text{
 	font-size: 1.8em;
 	padding-left:10px;
+  max-width: 90%;
 	&.done {
 		text-decoration: line-through;
 		color: #888;
@@ -95,8 +158,13 @@ input[type='checkbox']:checked {
 
 }
 
+.flex-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
 .controls{
-  margin-left:80px;
 	display:flex;
 	align-items:center;
 }
@@ -124,10 +192,20 @@ input[type='checkbox']:checked {
   box-shadow: 0 5px 8px rgba(0,0,0,0.19), 0 4px 4px rgba(0,0,0,0.23);
 }
 
-.items-list{
-  margin-top:15px;
-  max-width:500px;
+.nav-item{
+  width: 40vw;
 }
+.items-list {
+  margin-top: 15px;
+  max-width: 300px;
+  background-color: #622525;
+  padding: 2em;
+  border: 2px outset beige;
+  @media all and (min-width: 700px){
+    max-width: 600px;
+  }
+}
+
 .list-empty-label{
   color: #888;
   margin-left:40px;
@@ -164,9 +242,18 @@ input[type='checkbox']:checked {
   color: beige;
 }
 
-.listDiv{
-  padding: 1em;
+.listDiv {
+	padding: 1em;
+	height: 100vh;
+	width: 100vw;
+	/* background-color: red; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 }
+
 .lists{
   color: #d0d0b1;
   font-size: 1.5em;
@@ -174,4 +261,8 @@ input[type='checkbox']:checked {
 
 .verifyNumber{
   margin-top: 1em;
+  @media screen and (min-width: 600px){
+    margin-top: 3em;
+    font-size: 1.25em;
+  }
 }

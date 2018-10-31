@@ -1,4 +1,4 @@
-` npm install --save serve `
+` npm install --save serve `//deleted this
 
 ` heroku login `
 
@@ -19,3 +19,5 @@
       ` heroku buildpacks:set heroku/nodejs `
 
  * Add environment variables to Heroku UI
+
+ * Whitelist Heroku URL via Facebook, Google
