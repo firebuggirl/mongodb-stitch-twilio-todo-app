@@ -145,6 +145,7 @@ input[type='checkbox']:checked {
 	font-size: 1.8em;
 	padding-left:10px;
   max-width: 90%;
+  border-bottom: 2px solid beige;
 	&.done {
 		text-decoration: line-through;
 		color: #888;
