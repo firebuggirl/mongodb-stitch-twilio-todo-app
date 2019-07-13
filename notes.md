@@ -51,7 +51,7 @@ https://docs.mongodb.com/stitch/tutorials/todo-web/
 
     - From `todo` directory:
 
-        ` nvm use 8.9 `
+        ` nvm use 10.15.0 `
 
         ` npm install `
 
